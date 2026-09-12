@@ -114,9 +114,11 @@ while option != 0:
             print("No history available.")
         else:
             historylen = len(history) - 1
-            while historylen >= 0:
+            count = 0
+            while historylen >= 0 and count < 3:
                 print(f"- {history[historylen]}")
                 historylen = historylen - 1
+                count = count + 1
 
     elif option == 0:
         print("Have a good day")
